@@ -1,16 +1,21 @@
+import 'package:ddm_website/routes/app_pages.dart';
+import 'package:ddm_website/theme/app_theme.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-main(List<String> args) => runApp(const MainPage(Key("qweqwe")));
+void main() => runApp(const MyApp());
 
-class MainPage extends StatelessWidget {
-  const MainPage(Key key) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(child: Text("123")),
-      ),
+    return GetMaterialApp(
+      title: 'DDM',
+      theme: appThemeData,
+      initialRoute: Routes.home,
+      getPages: AppPages.pages,
     );
   }
 }
