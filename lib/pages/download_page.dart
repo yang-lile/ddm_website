@@ -23,7 +23,7 @@ class DownloadPage extends StatelessWidget {
                 ),
                 child: Container(
                   width: 1024,
-                  margin: const EdgeInsets.symmetric(vertical: 48.0),
+                  margin: const EdgeInsets.all(48.0),
                   padding: const EdgeInsets.all(48.0),
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
@@ -39,7 +39,7 @@ class DownloadPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 8.0),
                       Text(
-                        "作为分布式的系统，我们提供了以下安装包：",
+                        "作为分布式的系统，我们提供了以下安装包：(但是windows和linux暂只提供源代码)",
                         style: context.textTheme.headline4,
                       ),
                       const SizedBox(height: 8.0),
@@ -47,7 +47,8 @@ class DownloadPage extends StatelessWidget {
                         "Windows: ",
                         style: context.textTheme.headline6,
                       ),
-                      const LinkButton(link: 'https://www.baidu.com'),
+                      const LinkButton(
+                          link: 'https://github.com/yang-lile/ddm'),
                       const SizedBox(height: 8.0),
                       Text(
                         "Android: ",
@@ -55,13 +56,14 @@ class DownloadPage extends StatelessWidget {
                       ),
                       const LinkButton(
                           link:
-                              'https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/aosp-latest.tar'),
+                              'http://niceflutter.top:19090/assets/app-armeabi-v7a-release.apk'),
                       const SizedBox(height: 8.0),
                       Text(
                         "Linux: ",
                         style: context.textTheme.headline6,
                       ),
-                      const LinkButton(link: 'baidu.com'),
+                      const LinkButton(
+                          link: 'https://github.com/yang-lile/ddm'),
                     ],
                   ),
                 ),

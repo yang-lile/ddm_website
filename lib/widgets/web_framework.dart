@@ -1,3 +1,4 @@
+import 'package:ddm_website/widgets/phone_app_bar.dart';
 import 'package:ddm_website/widgets/web_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -26,10 +27,16 @@ class WebFramework extends StatelessWidget {
             Widget outSizedBox = SizedBox(
               width: outWidth / 2,
             );
+            // width>714
+            Widget appBar =
+                WebAppBar(outWidth: outWidth, outSizedBox: outSizedBox);
+            if (constraints.maxWidth < 714) {
+              appBar = const PhoneAppBar();
+            }
 
             return CustomScrollView(
               slivers: [
-                WebAppBar(outWidth: outWidth, outSizedBox: outSizedBox),
+                appBar,
                 SliverPadding(
                   padding: EdgeInsets.symmetric(
                     horizontal: outWidth / 2,
